@@ -1,14 +1,36 @@
 import { Component, PLATFORM_ID, inject, NgZone, ChangeDetectorRef } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+// 1. ADDED THIS IMPORT LINE AT THE TOP:
+import { AboutComponent } from './about/about';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  // 2. ADDED TO IMPORTS ARRAY HERE:
+  imports: [AboutComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   title = 'corporate-website';
+
+  // --- ADD ONLY THESE REVENUE LINES HERE ---
+  currentPage: string = 'home';
+  // BULLETPROOF NAVIGATION MANAGER
+  navigateTo(page: string, sectionId?: string) {
+    this.currentPage = page;
+
+    // FIX: Forces Angular to instantly swap the @if layout views right now
+    this.cdr.detectChanges();
+
+    if (sectionId) {
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) element.scrollIntoView({ behavior: 'smooth' });
+      }, 50);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
 
   words: string[] = ['Design', 'Build', 'Serve'];
   currentWord: string = 'Design';
