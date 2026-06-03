@@ -13,16 +13,33 @@
       </a>
 
       <nav class="hidden md:flex items-center space-x-6 lg:space-x-7">
-        <a href="#home" class="text-[13px] font-bold tracking-widest text-blue-600 transition duration-200">HOME</a>
-        <a href="#company" class="text-[13px] font-bold tracking-widest text-slate-800 hover:text-blue-600 transition duration-200">COMPANY</a>
-        <a href="#services" class="text-[13px] font-bold tracking-widest text-slate-800 hover:text-blue-600 transition duration-200">SERVICES</a>
-        <a href="#technologies" class="text-[13px] font-bold tracking-widest text-slate-800 hover:text-blue-600 transition duration-200">TECHNOLOGIES</a>
-        <a href="#careers" class="text-[13px] font-bold tracking-widest text-slate-800 hover:text-blue-600 transition duration-200">CAREERS</a>
-        <a href="#footer" class="text-[13px] font-bold tracking-widest text-slate-800 hover:text-blue-600 transition duration-200">CONTACT</a>
+        <a (click)="navigateTo('home')" class="text-[13px] font-bold tracking-widest text-slate-800 hover:text-blue-600 transition duration-200 cursor-pointer">HOME</a>
+        <div class="relative group h-full flex items-center cursor-pointer">
+          <span class="text-[13px] font-bold tracking-widest text-slate-800 group-hover:text-blue-600 transition duration-200 uppercase select-none">
+            COMPANY
+          </span>
+
+          <div class="absolute top-full left-0 pt-3 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50">
+            <div class="bg-white border border-slate-100 rounded-md shadow-lg py-2">
+              <a href="#portfolio" class="block px-5 py-2.5 text-[13px] font-medium text-slate-500 hover:text-blue-600 hover:bg-slate-50/50 transition duration-150">
+                Portfolio
+              </a>
+              <a (click)="navigateTo('about')" class="block px-5 py-2.5 text-[13px] font-medium text-slate-500 hover:text-blue-600 hover:bg-slate-50/50 transition duration-150 cursor-pointer">
+                About Us
+              </a>
+            </div>
+          </div>
+        </div>
+        <a (click)="navigateTo('home', 'services')" class="text-[13px] font-bold tracking-widest text-slate-800 hover:text-blue-600 transition duration-200 cursor-pointer">SERVICES</a>
+        <a (click)="navigateTo('home', 'technologies')" class="text-[13px] font-bold tracking-widest text-slate-800 hover:text-blue-600 transition duration-200 cursor-pointer">TECHNOLOGIES</a>
+        <a (click)="navigateTo('home', 'careers')" class="text-[13px] font-bold tracking-widest text-slate-800 hover:text-blue-600 transition duration-200 cursor-pointer">CAREERS</a>
+        <a (click)="navigateTo('home', 'footer')" class="text-[13px] font-bold tracking-widest text-slate-800 hover:text-blue-600 transition duration-200 cursor-pointer">CONTACT</a>
       </nav>
 
     </div>
   </header>
+
+  @if (currentPage === 'home') {
 
   <section class="relative w-full h-[500px] md:h-[600px] overflow-hidden flex items-center bg-[#060b18]">
     <video autoplay
@@ -40,52 +57,41 @@
 
     <div class="relative z-20 max-w-7xl mx-auto px-6 w-full">
       <div class="max-w-2xl space-y-4 md:space-y-5 text-left">
-
         <p class="text-slate-200 text-s md:text-m font-semibold tracking-widest opacity-90 uppercase">
           Discover a New Vision for Your Business Solutions
         </p>
-
         <h1 class="text-5xl md:text-6xl font-extrabold text-white tracking-tight select-none flex flex-col space-y-1 md:space-y-2">
           <span class="block leading-none">We</span>
-
           <span class="text-cyan-400 inline-flex items-center leading-none min-h-[38px] md:min-h-[58px]">
             {{ currentWord }}
             <span class="ml-2 inline-block w-[3px] h-[28px] md:h-[44px] bg-cyan-400 animate-pulse"></span>
           </span>
         </h1>
-
         <p class="text-slate-200 text-s md:text-m font-semibold tracking-widest opacity-90 uppercase">
           The next stage of your digital success begins right here with Nimbad Infotech
         </p>
-
       </div>
     </div>
   </section>
 
-
   <section id="home" class="bg-[#e9edf5] py-16 md:py-24 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
       <div class="space-y-6 text-left">
         <h2 class="text-3xl md:text-[38px] font-bold tracking-tight text-slate-900 leading-tight mb-4">
           Who Are We?
         </h2>
-
         <p class="text-slate-700 text-[15px] md:text-base leading-relaxed text-justify font-normal">
-          <span class="text-slate-900 font-bold">Nimbad Group</span> is an innovative global platform, seamlessly blending web development, design, and digital marketing services, including social media marketing. Our mission is to empower you with strategic solutions and state-of-the-art technology, propelling you to market excellence and achieving triumph. Rely on us for comprehensive support to thrive and succeed.
+          <span class="text-slate-900 font-bold">At Nimbad Infotech,</span>  we empower businesses to grow in the digital world through innovative and reliable IT solutions. We specialize in custom software development, IT consultancy, and recruitment services, delivering technology that is scalable, secure, and performance-driven. Our team of experienced professionals works closely with clients to understand their unique requirements and provide tailored solutions that improve efficiency, streamline operations, and support long-term business growth. With a strong focus on quality, transparency, and customer satisfaction, we aim to become your trusted technology partner, helping you transform ideas into successful digital products and build a future-ready organization.
         </p>
-
         <p class="text-slate-700 text-[15px] md:text-base leading-relaxed text-justify font-normal">
           We are not just a team, but a dynamic and motivated powerhouse, passionately dedicated to crafting innovative solutions that resonate with the pulse of today's ever-evolving business landscape. Our unwavering commitment lies in not only providing top-notch services but also in understanding and adapting them to your distinct needs, thus granting you the tools not just to survive but to truly flourish in the cutthroat competitive market. Count on us to not only be a reliable partner but an enthusiastic architect of your triumphant journey towards success.
         </p>
-
         <div class="pt-4">
-          <a href="#company" class="inline-block px-6 py-3 bg-[#1a66ff] hover:bg-blue-700 text-white text-sm font-semibold rounded-lg shadow-md shadow-blue-500/10 transition duration-200 tracking-wide">
+          <a (click)="navigateTo('about')" class="inline-block px-6 py-3 bg-[#1a66ff] hover:bg-blue-700 text-white text-sm font-semibold rounded-lg shadow-md shadow-blue-500/10 transition duration-200 tracking-wide cursor-pointer">
             Know more about us
           </a>
         </div>
       </div>
-
       <div class="w-full flex items-center justify-center lg:justify-end">
         <div class="w-full max-w-xl aspect-[4/3] lg:h-[440px] rounded-2xl overflow-hidden shadow-md border border-slate-200/60">
           <img src="PBI.webp"
@@ -93,37 +99,27 @@
                class="w-full h-full object-cover" />
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- 3. HOW WE EXECUTE / METHODOLOGY SECTION (MATCHING DARK CARD STYLES & ASYMMETRIC GRID) -->
   <section class="bg-white py-20 md:py-28 border-t border-slate-100">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-      <!-- Left Column: Copywriting Header Block -->
       <div class="space-y-6 text-left max-w-xl">
         <h3 class="text-3xl md:text-[38px] font-bold tracking-tight text-slate-900 leading-tight">
           <span class="text-[#1a66ff]">Agile Execution.</span><br />
           Finish Confidently.
         </h3>
-
         <div class="h-1 w-12 bg-[#1a66ff] rounded-full"></div>
-
         <p class="text-slate-600 text-[15px] md:text-base leading-relaxed text-justify pt-2">
           We eliminate alignment friction to launch your software initiatives rapidly. By establishing deep technical discovery and architectural roadmaps before development begins, our engineering teams hit full acceleration on day one.
         </p>
-
         <p class="text-slate-600 text-[15px] md:text-base leading-relaxed text-justify">
           As an architecture-focused technology partner, engineering integrity underpins everything we ship. Our continuous deployment cycles and rigorous automated quality benchmarks guarantee highly stable, secure, and enterprise-ready systems tailored to scale.
         </p>
       </div>
 
-      <!-- Right Column: Asymmetric Framework Matrix (Same exact size and layout position, Dark Formatting) -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:pb-6">
-
         <div class="group relative border border-slate-800/80 rounded-2xl p-8 overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-blue-600/10" style="background-color: #111a2e !important;">
-
           <div class="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 transition-all duration-500 ease-out group-hover:w-full"></div>
           <div class="h-12 w-12 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-xl flex items-center justify-center font-mono font-bold text-base mb-6 group-hover:scale-110 transition-all duration-300 shadow-inner">
             01
@@ -138,7 +134,6 @@
 
         <div class="group relative border border-slate-800/80 rounded-2xl p-8 overflow-hidden transition-all duration-300 lg:translate-y-6 hover:lg:translate-y-4.5 hover:shadow-2xl hover:shadow-blue-600/10" style="background-color: #111a2e !important;">
           <div class="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 transition-all duration-500 ease-out group-hover:w-full"></div>
-
           <div class="h-12 w-12 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-xl flex items-center justify-center font-mono font-bold text-base mb-6 group-hover:scale-110 transition-all duration-300 shadow-inner">
             02
           </div>
@@ -152,7 +147,6 @@
 
         <div class="group relative border border-slate-800/80 rounded-2xl p-8 overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-blue-600/10" style="background-color: #111a2e !important;">
           <div class="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 transition-all duration-500 ease-out group-hover:w-full"></div>
-
           <div class="h-12 w-12 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-xl flex items-center justify-center font-mono font-bold text-base mb-6 group-hover:scale-110 transition-all duration-300 shadow-inner">
             03
           </div>
@@ -166,7 +160,6 @@
 
         <div class="group relative border border-slate-800/80 rounded-2xl p-8 overflow-hidden transition-all duration-300 lg:translate-y-6 hover:lg:translate-y-4.5 hover:shadow-2xl hover:shadow-blue-600/10" style="background-color: #111a2e !important;">
           <div class="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 transition-all duration-500 ease-out group-hover:w-full"></div>
-
           <div class="h-12 w-12 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-xl flex items-center justify-center font-mono font-bold text-base mb-6 group-hover:scale-110 transition-all duration-300 shadow-inner">
             04
           </div>
@@ -177,15 +170,12 @@
             Executing rapid sprint releases to launch functional software builds predictably on timeline milestones.
           </p>
         </div>
-
       </div>
-
     </div>
   </section>
 
   <section id="services" style="background-color: #f4f6fa !important;" class="pt-10 pb-24 md:pt-12 md:pb-32 border-t border-slate-200/60 relative">
     <div class="max-w-7xl mx-auto px-6 relative z-10">
-
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
         <h2 class="text-3xl md:text-[38px] font-bold tracking-tight text-slate-900 leading-tight">
           Services We Offer
@@ -197,7 +187,6 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
         <div class="group relative border border-slate-800/80 rounded-2xl p-8 overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-blue-600/10" style="background-color: #111a2e !important;">
           <div class="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 transition-all duration-500 ease-out group-hover:w-full"></div>
           <div class="h-12 w-12 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-xl flex items-center justify-center text-xl font-bold mb-6 group-hover:scale-110 transition-all duration-300">
@@ -239,7 +228,6 @@
 
         <div class="group relative border border-slate-800/80 rounded-2xl p-8 overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-blue-600/10" style="background-color: #111a2e !important;">
           <div class="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 transition-all duration-500 ease-out group-hover:w-full"></div>
-
           <div class="h-12 w-12 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-xl flex items-center justify-center text-xl font-bold mb-6 group-hover:scale-110 transition-all duration-300">
             🧠
           </div>
@@ -276,9 +264,7 @@
             Affordable structural migration assistance helping pipelines deploy onto reliable cloud servers cleanly.
           </p>
         </div>
-
       </div>
-
     </div>
   </section>
 
@@ -305,12 +291,10 @@
 
   <section id="industries" class="bg-slate-50 py-24">
     <div class="max-w-7xl mx-auto px-6">
-
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
         <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Industries We Serve</h2>
         <div class="h-1 w-12 bg-blue-600 mx-auto rounded-full"></div>
       </div>
-
       <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
         <span class="px-5 py-3 bg-white border border-slate-200 shadow-sm rounded-xl font-bold text-slate-700 text-sm hover:border-blue-500 transition cursor-default">📦 Transport & Logistics</span>
         <span class="px-5 py-3 bg-white border border-slate-200 shadow-sm rounded-xl font-bold text-slate-700 text-sm hover:border-blue-500 transition cursor-default">🛒 Retail & E-Commerce</span>
@@ -319,49 +303,15 @@
         <span class="px-5 py-3 bg-white border border-slate-200 shadow-sm rounded-xl font-bold text-slate-700 text-sm hover:border-blue-500 transition cursor-default">💳 FinTech Architectures</span>
         <span class="px-5 py-3 bg-white border border-slate-200 shadow-sm rounded-xl font-bold text-slate-700 text-sm hover:border-blue-500 transition cursor-default">🚀 High-Growth Startups</span>
       </div>
-
     </div>
   </section>
 
-  <!--<footer id="footer" class="bg-slate-950 text-slate-400 pt-20 pb-10 border-t border-slate-900">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+  }
 
-      <div class="space-y-6">
-        <div class="flex items-center space-x-3 text-white">
-          <div class="h-9 w-9 bg-blue-600 rounded-lg flex items-center justify-center font-black text-base">N</div>
-          <span class="text-lg font-black tracking-tight">Nimbad Infotech Pvt.Ltd</span>
-        </div>
-        <p class="text-sm leading-relaxed text-slate-400">
-          Nimbad Infotech is a software development and IT consulting company based in Indore, India, delivering reliable and innovative digital solutions for business growth
-        </p>
-      </div>
+  @if (currentPage === 'about') {
+  <app-about></app-about>
+  }
 
-      <div class="space-y-4">
-        <h4 class="text-white font-bold text-sm tracking-wider uppercase">Services</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="#services" class="hover:text-white transition">Custom Software Engineering</a></li>
-          <li><a href="#services" class="hover:text-white transition">SaaS Product Development</a></li>
-          <li><a href="#services" class="hover:text-white transition">Mobile Application Design</a></li>
-          <li><a href="#services" class="hover:text-white transition">UI/UX Conversion Journeys</a></li>
-        </ul>
-      </div>
-
-      <div class="space-y-4">
-        <h4 class="text-white font-bold text-sm tracking-wider uppercase">Office Address</h4>
-        <p class="text-sm leading-relaxed text-slate-400">
-          12, Ganga Empire, Limbodi,<br>
-          Indore Madhya Pradesh<br>
-          452001, India
-        </p>
-        <p class="text-sm text-blue-400 font-semibold">Email: business&#64;nimbad.com</p>
-      </div>
-
-    </div>
-
-    <div class="max-w-7xl mx-auto px-6 pt-8 border-t border-slate-900 text-center text-xs text-slate-500">
-      &copy; 2026 Nimbad InfoTech pvt.ltd. All rights reserved.
-    </div>
-  </footer>-->
   <footer id="footer" class="bg-[#070c19] border-t border-slate-800/60 pt-16 pb-8 font-sans transition-all duration-300">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 pb-12 border-b border-slate-800/40">
 
