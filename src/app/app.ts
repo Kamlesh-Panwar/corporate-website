@@ -1,12 +1,12 @@
 import { Component, PLATFORM_ID, inject, NgZone, ChangeDetectorRef } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-// 1. ADDED THIS IMPORT LINE AT THE TOP:
 import { AboutComponent } from './about/about';
+import { PortfolioComponent } from './portfolio/portfolio';
 
 @Component({
   selector: 'app-root',
   // 2. ADDED TO IMPORTS ARRAY HERE:
-  imports: [AboutComponent],
+  imports: [AboutComponent, PortfolioComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
