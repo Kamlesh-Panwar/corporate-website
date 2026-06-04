@@ -30,8 +30,101 @@
             </div>
           </div>
         </div>
-        <a (click)="navigateTo('home', 'services')" class="text-[13px] font-bold tracking-widest text-slate-800 hover:text-blue-600 transition duration-200 cursor-pointer">SERVICES</a>
-        <a (click)="navigateTo('home', 'technologies')" class="text-[13px] font-bold tracking-widest text-slate-800 hover:text-blue-600 transition duration-200 cursor-pointer">TECHNOLOGIES</a>
+        <div class="relative group h-full flex items-center cursor-pointer">
+          <span (click)="navigateTo('home', 'services')" class="text-[13px] font-bold tracking-widest text-slate-800 group-hover:text-blue-600 transition duration-200 uppercase select-none">
+            SERVICES
+          </span>
+
+          <div class="absolute top-full left-0 pt-3 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50">
+            <div class="bg-white border border-slate-100 rounded-md shadow-lg py-2">
+              <a (click)="navigateTo('home', 'services')" class="block px-5 py-2.5 text-[13px] font-medium text-slate-500 hover:text-blue-600 hover:bg-slate-50/50 transition duration-150 cursor-pointer">
+                Custom Software Engineering
+              </a>
+              <a (click)="navigateTo('home', 'services')" class="block px-5 py-2.5 text-[13px] font-medium text-slate-500 hover:text-blue-600 hover:bg-slate-50/50 transition duration-150 cursor-pointer">
+                SaaS Product Development
+              </a>
+              <a (click)="navigateTo('home', 'services')" class="block px-5 py-2.5 text-[13px] font-medium text-slate-500 hover:text-blue-600 hover:bg-slate-50/50 transition duration-150 cursor-pointer">
+                Cloud Consulting Services
+              </a>
+              <a (click)="navigateTo('home', 'services')" class="block px-5 py-2.5 text-[13px] font-medium text-slate-500 hover:text-blue-600 hover:bg-slate-50/50 transition duration-150 cursor-pointer">
+                Mobile Application Architectures
+              </a>
+              <a (click)="navigateTo('home', 'services')" class="block px-5 py-2.5 text-[13px] font-medium text-slate-500 hover:text-blue-600 hover:bg-slate-50/50 transition duration-150 cursor-pointer">
+                AI / ML Engineering
+              </a>
+              <a (click)="navigateTo('home', 'services')" class="block px-5 py-2.5 text-[13px] font-medium text-slate-500 hover:text-blue-600 hover:bg-slate-50/50 transition duration-150 cursor-pointer">
+                UI/UX Creative Design
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ====== TECHNOLOGIES MULTI-COLUMN HOVER DROPDOWN ====== -->
+        <div class="relative group h-full flex items-center cursor-pointer">
+          <span (click)="navigateTo('home', 'technologies')" class="text-[13px] font-bold tracking-widest text-slate-800 group-hover:text-blue-600 transition duration-200 uppercase select-none">
+            TECHNOLOGIES
+          </span>
+
+          <!-- HOVER BRIDGE WRAPPER -->
+          <div class="absolute top-full left-1/2 -translate-x-[45%] pt-3 w-[780px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50">
+
+            <!-- MEGA-MENU CONTAINER -->
+            <div class="bg-white border border-slate-100 rounded-lg shadow-xl p-9 grid grid-cols-4 gap-x-8">
+
+              <!-- Column 1: Frontend -->
+              <div class="space-y-4 border-r border-slate-200/70 pr-6">
+                <h5 class="text-xs font-black tracking-widest text-slate-800 hover:text-blue-600 transition-colors duration-200 uppercase border-b border-slate-100 pb-3 cursor-pointer">
+                  Frontend
+                </h5>
+                <ul class="space-y-3.5 text-sm text-slate-500 font-medium">
+                  <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">React</a></li>
+                  <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">Angular</a></li>
+                  <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">Node</a></li>
+                  <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">Bootstrap</a></li>
+                  <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">JavaScript</a></li>
+                  <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">jQuery</a></li>
+                </ul>
+              </div>
+
+              <!-- Column 2: Backend -->
+              <div class="space-y-4 border-r border-slate-200/70 pr-6">
+                <h5 class="text-xs font-black tracking-widest text-slate-800 hover:text-blue-600 transition-colors duration-200 uppercase border-b border-slate-100 pb-3 cursor-pointer">
+                  Backend
+                </h5>
+                <ul class="space-y-3.5 text-sm text-slate-500 font-medium">
+                  <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">.NET</a></li>
+                  <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">Java</a></li>
+                  <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">Node JS</a></li>
+                </ul>
+              </div>
+
+              <!-- Column 3: Cloud Services -->
+              <div class="space-y-4 border-r border-slate-200/70 pr-6">
+                <h5 class="text-xs font-black tracking-widest text-slate-800 hover:text-blue-600 transition-colors duration-200 uppercase border-b border-slate-100 pb-3 cursor-pointer">
+                  Cloud
+                </h5>
+                <ul class="space-y-3.5 text-sm text-slate-500 font-medium">
+                  <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">Azure</a></li>
+                  <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">AWS</a></li>
+                </ul>
+              </div>
+
+              <!-- Column 4: Mobile -->
+              <div class="space-y-4">
+                <h5 class="text-xs font-black tracking-widest text-slate-800 hover:text-blue-600 transition-colors duration-200 uppercase border-b border-slate-100 pb-3 cursor-pointer">
+                  Mobile
+                </h5>
+                <ul class="space-y-3.5 text-sm text-slate-500 font-medium">
+                  <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">iOS</a></li>
+                  <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">Android</a></li>
+                  <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">Flutter</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
         <a (click)="navigateTo('home', 'careers')" class="text-[13px] font-bold tracking-widest text-slate-800 hover:text-blue-600 transition duration-200 cursor-pointer">CAREERS</a>
         <a (click)="navigateTo('home', 'footer')" class="text-[13px] font-bold tracking-widest text-slate-800 hover:text-blue-600 transition duration-200 cursor-pointer">CONTACT</a>
       </nav>
