@@ -3,10 +3,11 @@ import { isPlatformBrowser } from '@angular/common';
 import { AboutComponent } from './about/about';
 import { PortfolioComponent } from './portfolio/portfolio';
 import { ContactComponent } from './contact/contact';
+import { CustomSoftwareComponent } from './custom-software/custom-software';
 
 @Component({
   selector: 'app-root',
-  imports: [AboutComponent, PortfolioComponent, ContactComponent],
+  imports: [AboutComponent, PortfolioComponent, ContactComponent, CustomSoftwareComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
