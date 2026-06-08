@@ -29,6 +29,13 @@ yarn-error.log
 !.vscode/mcp.json
 .history/*
 
+# Visual Studio cache and local settings
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+submodules/.vs/
+
 # Miscellaneous
 /.angular/cache
 .sass-cache/
