@@ -1,4 +1,4 @@
-<section id="about" class="relative bg-white py-20 md:py-28 border-t border-slate-100 font-sans overflow-hidden">
+<section id="about" class="relative bg-[#fff5f6] pt-20 md:pt-28 pb-12 font-sans overflow-hidden text-left border-t border-slate-100">
 
   <div class="absolute inset-0 z-0 bg-[linear-gradient(to_right,#f8fafc_1px,transparent_1px),linear-gradient(to_bottom,#f8fafc_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
 
@@ -19,7 +19,6 @@
           At Nimbad Infotech, we treat software engineering as an exact science. Based in Indore, India, our technical collective integrates clean architectural design patterns with next-generation cloud services to optimize performance and drive enterprise market execution.
         </p>
 
-        <!-- Micro Productivity Data Counters -->
         <div class="grid grid-cols-2 gap-4 pt-4">
           <div class="border-l-2 border-blue-600 pl-4 py-1">
             <span class="block text-2xl font-extrabold text-slate-900">Indore, IN</span>
@@ -31,43 +30,37 @@
           </div>
         </div>
 
-        <!-- LET'S CONNECT CALL TO ACTION BUTTON (ARROW SLOT LOCATION) -->
         <div class="pt-4">
-            <a (click)="onConnect()" class="inline-flex items-center space-x-2 px-6 py-3 bg-[#1a66ff] hover:bg-blue-700 text-white text-sm font-semibold rounded-lg shadow-md shadow-blue-500/15 transition-all duration-200 tracking-wide cursor-pointer group">
-              <span>Let's Connect</span>
-              <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-              </svg>
-            </a>
-          </div>
+          <a (click)="onConnect()" class="inline-flex items-center space-x-2 px-6 py-3 bg-[#1a66ff] hover:bg-blue-700 text-white text-sm font-semibold rounded-lg shadow-md shadow-blue-500/15 transition-all duration-200 tracking-wide cursor-pointer group">
+            <span>Let's Connect</span>
+            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </a>
+        </div>
 
       </div>
 
-      <!-- Right Column: Premium Glowing Container for high-tech GIF or Image -->
       <div class="lg:col-span-6 w-full relative">
         <div class="absolute inset-0 bg-gradient-to-tr from-blue-600 to-cyan-400 rounded-3xl opacity-10 blur-2xl -rotate-2 scale-105"></div>
         <div class="relative bg-[#111a2e] p-3 rounded-3xl border border-slate-800/50 shadow-2xl overflow-hidden aspect-[16/10] flex items-center justify-center group">
 
-          <!-- TOP CORNER TECH ORNAMENT -->
           <div class="absolute top-4 right-4 flex space-x-1.5 z-20">
             <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
             <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
             <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
           </div>
 
-          <!-- DYNAMIC SOURCE CANVAS (Change src to your active system GIF or image path) -->
           <img src="about-delivery-mesh.gif"
                onerror="this.src='https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80'"
                alt="Nimbad Infotech Architecture Dashboard Pipeline Loop"
                class="w-full h-full object-cover rounded-2xl opacity-85 group-hover:opacity-100 group-hover:scale-[1.01] transition-all duration-500 ease-out" />
 
-          <!-- Futuristic HUD overlay lines -->
           <div class="absolute inset-0 border border-white/5 rounded-2xl pointer-events-none z-10 m-3"></div>
         </div>
       </div>
     </div>
 
-    <!-- MIDDLE LEVEL: DYNAMIC DARK CARD PILLARS MATRIX -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
 
       <!-- Pillar 1 -->
@@ -114,11 +107,12 @@
 
     </div>
 
-    <!-- LOWER LEVEL: CORE PIPELINE SKILL MATRIX FRAME (PRODUCTIVE ACCELERATOR) -->
-    <div class="bg-slate-50 border border-slate-100 rounded-3xl p-8 md:p-10 text-left">
+    <div class="group relative bg-slate-50 border border-slate-100 rounded-3xl p-8 md:p-10 text-left overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/5">
+
+      <div class="absolute top-0 left-0 h-[4px] w-0 bg-gradient-to-r from-[#1a66ff] via-cyan-400 to-indigo-500 transition-all duration-500 ease-out group-hover:w-full"></div>
+
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 
-        <!-- Left Side Subheading -->
         <div class="lg:col-span-4 space-y-2">
           <h4 class="text-xs font-bold text-blue-600 uppercase tracking-widest">Our Capabilities</h4>
           <h3 class="text-xl font-extrabold text-slate-900">Architectural Strengths</h3>
@@ -127,9 +121,7 @@
           </p>
         </div>
 
-        <!-- Right Side Progress Matrix Bars -->
         <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <!-- Stat 1 -->
           <div class="space-y-1.5">
             <div class="flex justify-between text-xs font-bold text-slate-700 tracking-wide uppercase">
               <span>Enterprise Backends (.NET/Cloud)</span>
@@ -139,7 +131,6 @@
               <div class="h-full bg-gradient-to-r from-blue-600 to-blue-500 rounded-full w-[95%]"></div>
             </div>
           </div>
-          <!-- Stat 2 -->
           <div class="space-y-1.5">
             <div class="flex justify-between text-xs font-bold text-slate-700 tracking-wide uppercase">
               <span>Database Query Optimization</span>
@@ -149,40 +140,36 @@
               <div class="h-full bg-gradient-to-r from-cyan-400 to-cyan-500 rounded-full w-[90%]"></div>
             </div>
           </div>
-          <!-- Stat 3 -->
           <div class="space-y-1.5">
             <div class="flex justify-between text-xs font-bold text-slate-700 tracking-wide uppercase">
               <span>Full-Stack UI Component Systems</span>
               <span class="text-indigo-500">92%</span>
             </div>
             <div class="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
-              <div class="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full w-[88%]"></div>
+              <div class="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full w-[92%]"></div>
             </div>
           </div>
-          <!-- Stat 4 -->
           <div class="space-y-1.5">
             <div class="flex justify-between text-xs font-bold text-slate-700 tracking-wide uppercase">
               <span>SaaS Multi-Tenant Security</span>
               <span class="text-blue-600">96%</span>
             </div>
             <div class="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
-              <div class="h-full bg-gradient-to-r from-blue-600 to-cyan-400 rounded-full w-[92%]"></div>
+              <div class="h-full bg-gradient-to-r from-blue-600 to-cyan-400 rounded-full w-[96%]"></div>
             </div>
           </div>
         </div>
 
       </div>
     </div>
-
-    <!-- WHY NIMBAD INFOTECH GRID VALUE PROPOSITION (ADDED DIRECTLY AFTER CAPABILITIES) -->
     <div class="mt-24 pt-16 border-t border-slate-100">
-      <span class="text-3xl font-black text-blue-900 tracking-widest text-left mb-12  block">
+      <h3 class="text-3xl font-black text-slate-900 tracking-tight text-left mb-12">
         Why Nimbad?
-      </span>
+      </h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-10 lg:gap-x-8 text-left">
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-left">
         <!-- Pillar 1 -->
-        <div class="space-y-4">
+        <div class="space-y-4 lg:border-r lg:border-slate-200 lg:pr-8">
           <div class="text-[#1a66ff]">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -193,7 +180,7 @@
         </div>
 
         <!-- Pillar 2 -->
-        <div class="space-y-4">
+        <div class="space-y-4 lg:border-r lg:border-slate-200 lg:pr-8">
           <div class="text-[#1a66ff]">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -205,14 +192,14 @@
         </div>
 
         <!-- Pillar 3 -->
-        <div class="space-y-4">
+        <div class="space-y-4 lg:border-r lg:border-slate-200 lg:pr-8">
           <div class="text-[#1a66ff]">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
             </svg>
           </div>
           <h4 class="text-[17px] font-bold text-slate-900 leading-snug">Excellent Code Quality</h4>
-          <p class="text-slate-500 text-sm leading-relaxed font-normal">Beyond QA, we ensure your code is immaculate and free of technical debt.</p>
+          <p class="text-slate-500 text-sm leading-relaxed font-normal">Beyond QA, we ensure your code is safe, immaculate, and free of technical debt.</p>
         </div>
 
         <!-- Pillar 4 -->
@@ -225,6 +212,7 @@
           <h4 class="text-[17px] font-bold text-slate-900 leading-snug">100% Transparency</h4>
           <p class="text-slate-500 text-sm leading-relaxed font-normal">Explicit and consistent communication, flexible pricing, and full dedication to your success.</p>
         </div>
+
       </div>
     </div>
 
