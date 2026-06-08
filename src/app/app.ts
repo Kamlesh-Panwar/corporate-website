@@ -5,21 +5,15 @@ import { PortfolioComponent } from './portfolio/portfolio';
 
 @Component({
   selector: 'app-root',
-  // 2. ADDED TO IMPORTS ARRAY HERE:
   imports: [AboutComponent, PortfolioComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   title = 'corporate-website';
-
-  // --- ADD ONLY THESE REVENUE LINES HERE ---
   currentPage: string = 'home';
-  // BULLETPROOF NAVIGATION MANAGER
   navigateTo(page: string, sectionId?: string) {
     this.currentPage = page;
-
-    // FIX: Forces Angular to instantly swap the @if layout views right now
     this.cdr.detectChanges();
 
     if (sectionId) {
@@ -44,7 +38,6 @@ export class App {
   private cdr = inject(ChangeDetectorRef);
 
   constructor() {
-    // Safely verify browser access to bypass hydration conflicts
     if (isPlatformBrowser(this.platformId)) {
       setTimeout(() => {
         this.syncTypewriter();
@@ -62,19 +55,18 @@ export class App {
         this.txt = fullWord.substring(0, this.txt.length + 1);
       }
 
-      // Safeguard: If blank, insert a non-breaking space to lock text line-height
       this.currentWord = this.txt === '' ? '\u00A0' : this.txt;
       this.cdr.detectChanges();
 
       let dynamicSpeed = this.isDeleting ? 50 : 100;
 
       if (!this.isDeleting && this.txt === fullWord) {
-        dynamicSpeed = 2000; // Keep full word static for 2 seconds
+        dynamicSpeed = 2000; 
         this.isDeleting = true;
       } else if (this.isDeleting && this.txt === '') {
         this.isDeleting = false;
-        this.wordIndex = (this.wordIndex + 1) % this.words.length; // Step forward smoothly
-        dynamicSpeed = 300; // Rest brief moment at blank canvas
+        this.wordIndex = (this.wordIndex + 1) % this.words.length; 
+        dynamicSpeed = 300; 
       }
 
       setTimeout(() => {
