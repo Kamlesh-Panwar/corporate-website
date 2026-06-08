@@ -2,10 +2,11 @@ import { Component, PLATFORM_ID, inject, NgZone, ChangeDetectorRef } from '@angu
 import { isPlatformBrowser } from '@angular/common';
 import { AboutComponent } from './about/about';
 import { PortfolioComponent } from './portfolio/portfolio';
+import { ContactComponent } from './contact/contact';
 
 @Component({
   selector: 'app-root',
-  imports: [AboutComponent, PortfolioComponent],
+  imports: [AboutComponent, PortfolioComponent, ContactComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

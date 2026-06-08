@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { App } from '../app';
 
 @Component({
   selector: 'app-portfolio',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
   templateUrl: './portfolio.html'
 })
 export class PortfolioComponent {
-  // We will manage category filters and case study data objects here later!
+  private app = inject(App);
+
+  goToContact() {
+    this.app.navigateTo('contact', 'secure-portal');
+  }
 }
