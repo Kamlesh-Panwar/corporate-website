@@ -90,7 +90,7 @@
                   Backend
                 </h5>
                 <ul class="space-y-3.5 text-sm text-slate-500 font-medium">
-                  <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">.NET</a></li>
+                  <li><a (click)="navigateTo('dotnet')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">.NET</a></li>
                   <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">Java</a></li>
                   <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">Node JS</a></li>
                 </ul>
@@ -438,6 +438,10 @@
 
   @if (currentPage === 'ui-ux-design') {
   <app-ui-ux-design></app-ui-ux-design>
+  }
+
+  @if (currentPage === 'dotnet') {
+  <app-dotnet></app-dotnet>
   }
 
   <footer id="footer" class="bg-[#070c19] border-t border-slate-800/60 pt-16 pb-8 font-sans transition-all duration-300">

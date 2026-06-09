@@ -9,10 +9,11 @@ import { CloudConsultingComponent } from './cloud-consulting/cloud-consulting';
 import { MobileArchitectureComponent } from './mobile-architecture/mobile-architecture';
 import { AiMlComponent } from './ai-ml/ai-ml';
 import { UiUxDesignComponent } from './ui-ux-design/ui-ux-design';
+import { DotnetComponent } from './dotnet/dotnet';
 
 @Component({
   selector: 'app-root',
-  imports: [AboutComponent, PortfolioComponent, ContactComponent, CustomSoftwareComponent, SaasDevelopmentComponent, CloudConsultingComponent, MobileArchitectureComponent, AiMlComponent, UiUxDesignComponent],
+  imports: [AboutComponent, PortfolioComponent, ContactComponent, CustomSoftwareComponent, SaasDevelopmentComponent, CloudConsultingComponent, MobileArchitectureComponent, AiMlComponent, UiUxDesignComponent, DotnetComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
