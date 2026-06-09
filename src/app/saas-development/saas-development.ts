@@ -2,10 +2,8 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { App } from '../app';
 
-interface Capability {
+interface SaasService {
   icon: string;
-  bgColor: string;
-  textColor: string;
   title: string;
   description: string;
 }
@@ -22,37 +20,31 @@ interface TechCategory {
 }
 
 @Component({
-  selector: 'app-custom-software',
+  selector: 'app-saas-development',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './custom-software.html'
+  templateUrl: './saas-development.html'
 })
-export class CustomSoftwareComponent {
+export class SaasDevelopmentComponent {
   private app = inject(App);
 
   activeCategory: string = 'Languages & Core Web';
 
-  capabilities: Capability[] = [
+  services: SaasService[] = [
     {
-      icon: '⚙️',
-      bgColor: 'bg-blue-50',
-      textColor: 'text-blue-600',
-      title: 'Enterprise Architecture',
-      description: 'Designing solid distributed systems leveraging robust design patterns, secure repository workflows, and efficient relational queries.'
+      icon: '💬',
+      title: 'SaaS Development Consulting',
+      description: 'We follow a carefully thought-out path for implementing multi-tenant architectures using cutting-edge tools, optimized resource pooling setups, and agile deployment schedules without straying from long-term corporate objectives.'
     },
     {
-      icon: '☁️',
-      bgColor: 'bg-cyan-50',
-      textColor: 'text-cyan-600',
-      title: 'Cloud-Native Pipelines',
-      description: 'Assembling isolated serverless storage buckets, managed key vaults, and optimized back-end data workers across your pipeline infrastructure.'
+      icon: '📊',
+      title: 'SaaS Prototype & Design',
+      description: 'Using high-fidelity interactive wireframes and prototypes, our engineering team explores complex behavioural patterns to build optimal cloud layouts that offer highly secure multi-user subscription scaling.'
     },
     {
-      icon: '🔌',
-      bgColor: 'bg-indigo-50',
-      textColor: 'text-indigo-600',
-      title: 'Secure API Integrations',
-      description: 'Developing decoupled, secure web data layers utilizing performance optimization rules to integrate external service targets effortlessly.'
+      icon: '🔧',
+      title: 'SaaS Application Modernization & Support',
+      description: 'Utilize our modern cloud transition frameworks to migrate legacy software environments into scalable multi-tenant SaaS options with secure API access layers and robust processing speeds.'
     }
   ];
 

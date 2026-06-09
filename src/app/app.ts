@@ -4,10 +4,11 @@ import { AboutComponent } from './about/about';
 import { PortfolioComponent } from './portfolio/portfolio';
 import { ContactComponent } from './contact/contact';
 import { CustomSoftwareComponent } from './custom-software/custom-software';
+import { SaasDevelopmentComponent } from './saas-development/saas-development';
 
 @Component({
   selector: 'app-root',
-  imports: [AboutComponent, PortfolioComponent, ContactComponent, CustomSoftwareComponent],
+  imports: [AboutComponent, PortfolioComponent, ContactComponent, CustomSoftwareComponent, SaasDevelopmentComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
