@@ -27,7 +27,7 @@ export class DotnetComponent {
   techStacks: TechStack[] = [
     {
       title: 'ASP.NET Core Web API',
-      version: '.NET 8/9',
+      version: '.NET 10',
       description: 'Building decoupled RESTful data layers and lightweight backend architectures optimized for high-volume enterprise traffic pipelines.',
       features: ['Minimal APIs', 'JWT Authorization', 'Rate Limiting']
     },
