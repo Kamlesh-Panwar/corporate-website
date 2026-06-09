@@ -38,22 +38,22 @@
 
           <div class="absolute top-full left-0 pt-3 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50">
             <div class="bg-white border border-slate-100 rounded-md shadow-lg py-2">
-              <a (click)="navigateTo('home', 'services')" class="block px-5 py-2.5 text-[13px] font-medium text-slate-500 hover:text-blue-600 hover:bg-slate-50/50 transition duration-150 cursor-pointer">
+              <a (click)="navigateTo('custom-software')" class="block px-5 py-2.5 text-[13px] font-medium text-slate-500 hover:text-blue-600 hover:bg-slate-50/50 transition duration-150 cursor-pointer">
                 Custom Software Engineering
               </a>
-              <a (click)="navigateTo('home', 'services')" class="block px-5 py-2.5 text-[13px] font-medium text-slate-500 hover:text-blue-600 hover:bg-slate-50/50 transition duration-150 cursor-pointer">
+              <a (click)="navigateTo('saas-development')" class="block px-5 py-2.5 text-[13px] font-medium text-slate-500 hover:text-blue-600 hover:bg-slate-50/50 transition duration-150 cursor-pointer">
                 SaaS Product Development
               </a>
-              <a (click)="navigateTo('home', 'services')" class="block px-5 py-2.5 text-[13px] font-medium text-slate-500 hover:text-blue-600 hover:bg-slate-50/50 transition duration-150 cursor-pointer">
+              <a (click)="navigateTo('cloud-consulting')" class="block px-5 py-2.5 text-[13px] font-medium text-slate-500 hover:text-blue-600 hover:bg-slate-50/50 transition duration-150 cursor-pointer">
                 Cloud Consulting Services
               </a>
-              <a (click)="navigateTo('home', 'services')" class="block px-5 py-2.5 text-[13px] font-medium text-slate-500 hover:text-blue-600 hover:bg-slate-50/50 transition duration-150 cursor-pointer">
+              <a (click)="navigateTo('mobile-architecture')" class="block px-5 py-2.5 text-[13px] font-medium text-slate-500 hover:text-blue-600 hover:bg-slate-50/50 transition duration-150 cursor-pointer">
                 Mobile Application Architectures
               </a>
-              <a (click)="navigateTo('home', 'services')" class="block px-5 py-2.5 text-[13px] font-medium text-slate-500 hover:text-blue-600 hover:bg-slate-50/50 transition duration-150 cursor-pointer">
+              <a (click)="navigateTo('ai-ml')" class="block px-5 py-2.5 text-[13px] font-medium text-slate-500 hover:text-blue-600 hover:bg-slate-50/50 transition duration-150 cursor-pointer">
                 AI / ML Engineering
               </a>
-              <a (click)="navigateTo('home', 'services')" class="block px-5 py-2.5 text-[13px] font-medium text-slate-500 hover:text-blue-600 hover:bg-slate-50/50 transition duration-150 cursor-pointer">
+              <a (click)="navigateTo('ui-ux-design')" class="block px-5 py-2.5 text-[13px] font-medium text-slate-500 hover:text-blue-600 hover:bg-slate-50/50 transition duration-150 cursor-pointer">
                 UI/UX Creative Design
               </a>
             </div>
@@ -280,9 +280,9 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="group relative border border-slate-800/80 rounded-2xl p-8 overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-blue-600/10" style="background-color: #111a2e !important;">
+        <div (click)="navigateTo('custom-software')" class="group relative border border-slate-800/80 rounded-2xl p-8 overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-blue-600/10 cursor-pointer" style="background-color: #111a2e !important;">
           <div class="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 transition-all duration-500 ease-out group-hover:w-full"></div>
-          <div class="h-12 w-12 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-xl flex items-center justify-center text-xl font-bold mb-6 group-hover:scale-110 transition-all duration-300">
+          <div class="h-12 w-12 bg-cyan-500/10 text-cyan-400 ...">
             💻
           </div>
           <h3 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-200">
@@ -293,7 +293,7 @@
           </p>
         </div>
 
-        <div class="group relative border border-slate-800/80 rounded-2xl p-8 overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-blue-600/10" style="background-color: #111a2e !important;">
+        <div (click)="navigateTo('saas-development')" class="group relative border border-slate-800/80 rounded-2xl p-8 overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-blue-600/10 cursor-pointer" style="background-color: #111a2e !important;">
           <div class="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 transition-all duration-500 ease-out group-hover:w-full"></div>
           <div class="h-12 w-12 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-xl flex items-center justify-center text-xl font-bold mb-6 group-hover:scale-110 transition-all duration-300">
             🚀
@@ -306,7 +306,7 @@
           </p>
         </div>
 
-        <div class="group relative border border-slate-800/80 rounded-2xl p-8 overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-blue-600/10" style="background-color: #111a2e !important;">
+        <div (click)="navigateTo('mobile-architecture')" class="group relative border border-slate-800/80 rounded-2xl p-8 overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-blue-600/10 cursor-pointer" style="background-color: #111a2e !important;">
           <div class="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 transition-all duration-500 ease-out group-hover:w-full"></div>
           <div class="h-12 w-12 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-xl flex items-center justify-center text-xl font-bold mb-6 group-hover:scale-110 transition-all duration-300">
             📱
@@ -319,7 +319,7 @@
           </p>
         </div>
 
-        <div class="group relative border border-slate-800/80 rounded-2xl p-8 overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-blue-600/10" style="background-color: #111a2e !important;">
+        <div (click)="navigateTo('ai-ml')" class="group relative border border-slate-800/80 rounded-2xl p-8 overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-blue-600/10 cursor-pointer" style="background-color: #111a2e !important;">
           <div class="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 transition-all duration-500 ease-out group-hover:w-full"></div>
           <div class="h-12 w-12 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-xl flex items-center justify-center text-xl font-bold mb-6 group-hover:scale-110 transition-all duration-300">
             🧠
@@ -332,7 +332,7 @@
           </p>
         </div>
 
-        <div class="group relative border border-slate-800/80 rounded-2xl p-8 overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-blue-600/10" style="background-color: #111a2e !important;">
+        <div (click)="navigateTo('ui-ux-design')" class="group relative border border-slate-800/80 rounded-2xl p-8 overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-blue-600/10 cursor-pointer" style="background-color: #111a2e !important;">
           <div class="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 transition-all duration-500 ease-out group-hover:w-full"></div>
           <div class="h-12 w-12 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-xl flex items-center justify-center text-xl font-bold mb-6 group-hover:scale-110 transition-all duration-300">
             🎨
@@ -345,14 +345,17 @@
           </p>
         </div>
 
-        <div class="group relative border border-slate-800/80 rounded-2xl p-8 overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-blue-600/10" style="background-color: #111a2e !important;">
+        <div (click)="navigateTo('cloud-consulting')" class="group relative border border-slate-800/80 rounded-2xl p-8 overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-blue-600/10 cursor-pointer" style="background-color: #111a2e !important;">
           <div class="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 transition-all duration-500 ease-out group-hover:w-full"></div>
+
           <div class="h-12 w-12 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-xl flex items-center justify-center text-xl font-bold mb-6 group-hover:scale-110 transition-all duration-300">
             ☁️
           </div>
+
           <h3 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-200">
             Cloud Consulting Services
           </h3>
+
           <p class="text-slate-400 text-sm leading-relaxed">
             Affordable structural migration assistance helping pipelines deploy onto reliable cloud servers cleanly.
           </p>
@@ -413,6 +416,29 @@
   <app-contact></app-contact>
   }
 
+  @if (currentPage === 'custom-software') {
+  <app-custom-software></app-custom-software>
+  }
+
+  @if (currentPage === 'saas-development') {
+  <app-saas-development></app-saas-development>
+  }
+
+  @if (currentPage === 'cloud-consulting') {
+  <app-cloud-consulting></app-cloud-consulting>
+  }
+
+  @if (currentPage === 'mobile-architecture') {
+  <app-mobile-architecture></app-mobile-architecture>
+  }
+
+  @if (currentPage === 'ai-ml') {
+  <app-ai-ml></app-ai-ml>
+  }
+
+  @if (currentPage === 'ui-ux-design') {
+  <app-ui-ux-design></app-ui-ux-design>
+  }
 
   <footer id="footer" class="bg-[#070c19] border-t border-slate-800/60 pt-16 pb-8 font-sans transition-all duration-300">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 pb-12 border-b border-slate-800/40">
@@ -434,27 +460,32 @@
         </h4>
         <ul class="space-y-2.5 text-xs md:text-sm">
           <li>
-            <a (click)="navigateTo('home', 'services')" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200 font-normal cursor-pointer">
+            <a (click)="navigateTo('custom-software')" class="text-slate-400 hover:text-blue-500 transition duration-150 cursor-pointer block">
               Custom Software Engineering
             </a>
           </li>
           <li>
-            <a (click)="navigateTo('home', 'services')" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200 font-normal cursor-pointer">
+            <a (click)="navigateTo('saas-development')" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200 font-normal cursor-pointer">
               SaaS Product Development
             </a>
           </li>
           <li>
-            <a (click)="navigateTo('home', 'services')" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200 font-normal cursor-pointer">
+            <a (click)="navigateTo('cloud-consulting')" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200 font-normal cursor-pointer">
+              Cloud Consulting Services
+            </a>
+          </li>
+          <li>
+            <a (click)="navigateTo('mobile-architecture')" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200 font-normal cursor-pointer">
               Mobile Application Architectures
             </a>
           </li>
           <li>
-            <a (click)="navigateTo('home', 'services')" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200 font-normal cursor-pointer">
+            <a (click)="navigateTo('ai-ml')" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200 font-normal cursor-pointer">
               AI / ML Engineering
             </a>
           </li>
           <li>
-            <a (click)="navigateTo('home', 'services')" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200 font-normal cursor-pointer">
+            <a (click)="navigateTo('ui-ux-design')" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200 font-normal cursor-pointer">
               UI/UX Creative Design
             </a>
           </li>

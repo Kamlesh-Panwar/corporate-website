@@ -3,10 +3,16 @@ import { isPlatformBrowser } from '@angular/common';
 import { AboutComponent } from './about/about';
 import { PortfolioComponent } from './portfolio/portfolio';
 import { ContactComponent } from './contact/contact';
+import { CustomSoftwareComponent } from './custom-software/custom-software';
+import { SaasDevelopmentComponent } from './saas-development/saas-development';
+import { CloudConsultingComponent } from './cloud-consulting/cloud-consulting';
+import { MobileArchitectureComponent } from './mobile-architecture/mobile-architecture';
+import { AiMlComponent } from './ai-ml/ai-ml';
+import { UiUxDesignComponent } from './ui-ux-design/ui-ux-design';
 
 @Component({
   selector: 'app-root',
-  imports: [AboutComponent, PortfolioComponent, ContactComponent],
+  imports: [AboutComponent, PortfolioComponent, ContactComponent, CustomSoftwareComponent, SaasDevelopmentComponent, CloudConsultingComponent, MobileArchitectureComponent, AiMlComponent, UiUxDesignComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
