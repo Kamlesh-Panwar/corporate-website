@@ -7,10 +7,11 @@ import { CustomSoftwareComponent } from './custom-software/custom-software';
 import { SaasDevelopmentComponent } from './saas-development/saas-development';
 import { CloudConsultingComponent } from './cloud-consulting/cloud-consulting';
 import { MobileArchitectureComponent } from './mobile-architecture/mobile-architecture';
+import { AiMlComponent } from './ai-ml/ai-ml';
 
 @Component({
   selector: 'app-root',
-  imports: [AboutComponent, PortfolioComponent, ContactComponent, CustomSoftwareComponent, SaasDevelopmentComponent, CloudConsultingComponent, MobileArchitectureComponent],
+  imports: [AboutComponent, PortfolioComponent, ContactComponent, CustomSoftwareComponent, SaasDevelopmentComponent, CloudConsultingComponent, MobileArchitectureComponent, AiMlComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
