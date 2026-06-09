@@ -102,8 +102,8 @@
                   Cloud
                 </h5>
                 <ul class="space-y-3.5 text-sm text-slate-500 font-medium">
-                  <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">Azure</a></li>
-                  <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">AWS</a></li>
+                  <li><a (click)="navigateTo('azure')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">Azure</a></li>
+                  <li><a (click)="navigateTo('aws')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">AWS</a></li>
                 </ul>
               </div>
 
@@ -450,6 +450,14 @@
 
   @if (currentPage === 'nodejs') {
   <app-nodejs></app-nodejs>
+  }
+
+  @if (currentPage === 'azure') {
+  <app-azure></app-azure>
+  }
+
+  @if (currentPage === 'aws') {
+  <app-aws></app-aws>
   }
 
   <footer id="footer" class="bg-[#070c19] border-t border-slate-800/60 pt-16 pb-8 font-sans transition-all duration-300">
