@@ -12,10 +12,13 @@ import { UiUxDesignComponent } from './ui-ux-design/ui-ux-design';
 import { DotnetComponent } from './dotnet/dotnet';
 import { JavaComponent } from './java/java';
 import { NodejsComponent } from './nodejs/nodejs';
+import { AzureComponent } from './azure/azure';
+import { AwsComponent } from './aws/aws';
+
 
 @Component({
   selector: 'app-root',
-  imports: [AboutComponent, PortfolioComponent, ContactComponent, CustomSoftwareComponent, SaasDevelopmentComponent, CloudConsultingComponent, MobileArchitectureComponent, AiMlComponent, UiUxDesignComponent, DotnetComponent, JavaComponent, NodejsComponent],
+  imports: [AboutComponent, PortfolioComponent, ContactComponent, CustomSoftwareComponent, SaasDevelopmentComponent, CloudConsultingComponent, MobileArchitectureComponent, AiMlComponent, UiUxDesignComponent, DotnetComponent, JavaComponent, NodejsComponent, AzureComponent, AwsComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
