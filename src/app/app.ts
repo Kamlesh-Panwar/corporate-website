@@ -5,10 +5,11 @@ import { PortfolioComponent } from './portfolio/portfolio';
 import { ContactComponent } from './contact/contact';
 import { CustomSoftwareComponent } from './custom-software/custom-software';
 import { SaasDevelopmentComponent } from './saas-development/saas-development';
+import { CloudConsultingComponent } from './cloud-consulting/cloud-consulting';
 
 @Component({
   selector: 'app-root',
-  imports: [AboutComponent, PortfolioComponent, ContactComponent, CustomSoftwareComponent, SaasDevelopmentComponent],
+  imports: [AboutComponent, PortfolioComponent, ContactComponent, CustomSoftwareComponent, SaasDevelopmentComponent, CloudConsultingComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
