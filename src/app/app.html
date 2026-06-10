@@ -113,9 +113,9 @@
                   Mobile
                 </h5>
                 <ul class="space-y-3.5 text-sm text-slate-500 font-medium">
-                  <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">iOS</a></li>
-                  <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">Android</a></li>
-                  <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">Flutter</a></li>
+                  <li><a (click)="navigateTo('ios')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">iOS</a></li>
+                  <li><a (click)="navigateTo('android')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">Android</a></li>
+                  <li><a (click)="navigateTo('flutter')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">Flutter</a></li>
                 </ul>
               </div>
 
@@ -458,6 +458,18 @@
 
   @if (currentPage === 'aws') {
   <app-aws></app-aws>
+  }
+
+  @if (currentPage === 'ios') {
+  <app-ios></app-ios>
+  }
+
+  @if (currentPage === 'android') {
+  <app-android></app-android>
+  }
+
+  @if (currentPage === 'flutter') {
+  <app-flutter></app-flutter>
   }
 
   <footer id="footer" class="bg-[#070c19] border-t border-slate-800/60 pt-16 pb-8 font-sans transition-all duration-300">

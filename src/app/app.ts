@@ -14,11 +14,17 @@ import { JavaComponent } from './java/java';
 import { NodejsComponent } from './nodejs/nodejs';
 import { AzureComponent } from './azure/azure';
 import { AwsComponent } from './aws/aws';
+import { IosComponent } from './ios/ios';
+import { AndroidComponent } from './android/android';
+import { FlutterComponent } from './flutter/flutter';
+
 
 
 @Component({
   selector: 'app-root',
-  imports: [AboutComponent, PortfolioComponent, ContactComponent, CustomSoftwareComponent, SaasDevelopmentComponent, CloudConsultingComponent, MobileArchitectureComponent, AiMlComponent, UiUxDesignComponent, DotnetComponent, JavaComponent, NodejsComponent, AzureComponent, AwsComponent],
+  imports: [AboutComponent, PortfolioComponent, ContactComponent, CustomSoftwareComponent, SaasDevelopmentComponent,
+    CloudConsultingComponent, MobileArchitectureComponent, AiMlComponent, UiUxDesignComponent,
+    DotnetComponent, JavaComponent, NodejsComponent, AzureComponent, AwsComponent, IosComponent, AndroidComponent, FlutterComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
