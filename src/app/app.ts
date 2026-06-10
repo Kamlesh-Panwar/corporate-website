@@ -21,6 +21,7 @@ import { ReactComponent } from './react/react';
 import { AngularComponent } from './angular/angular';
 import { NodeComponent } from './node/node';
 import { BootstrapComponent } from './bootstrap/bootstrap';
+import { JavascriptComponent } from './javascript/javascript';
 
 
 
@@ -28,7 +29,7 @@ import { BootstrapComponent } from './bootstrap/bootstrap';
   selector: 'app-root',
   imports: [AboutComponent, PortfolioComponent, ContactComponent, CustomSoftwareComponent, SaasDevelopmentComponent,
     CloudConsultingComponent, MobileArchitectureComponent, AiMlComponent, UiUxDesignComponent,
-    DotnetComponent, JavaComponent, NodejsComponent, AzureComponent, AwsComponent, IosComponent, AndroidComponent, FlutterComponent, ReactComponent, AngularComponent, NodeComponent, BootstrapComponent],
+    DotnetComponent, JavaComponent, NodejsComponent, AzureComponent, AwsComponent, IosComponent, AndroidComponent, FlutterComponent, ReactComponent, AngularComponent, NodeComponent, BootstrapComponent, JavascriptComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

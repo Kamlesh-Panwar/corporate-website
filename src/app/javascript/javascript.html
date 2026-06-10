@@ -1,0 +1,120 @@
+<section class="relative w-full min-h-[420px] bg-[#060b18] text-white py-20 flex items-center overflow-hidden font-sans text-left">
+  <div class="absolute inset-0 z-0 opacity-10 pointer-events-none select-none bg-[radial-gradient(#f7df1e_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center space-x-3 bg-amber-500/10 border border-amber-500/20 px-4 py-1.5 rounded-full">
+          <span class="flex h-2 w-2 rounded-full bg-amber-400 animate-pulse"></span>
+          <span class="text-xs font-bold text-amber-400 tracking-wider uppercase">Native Script Execution</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-black tracking-tight text-white leading-none">
+          High-Velocity & Native<br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-500 to-orange-400">JavaScript Core</span> Engineering
+        </h1>
+        <p class="text-slate-300 text-sm md:text-base leading-relaxed text-justify font-normal max-w-2xl">
+          We craft lightning-fast web interactions and interactive presentation modules utilizing pure Vanilla JavaScript implementations. Our development blueprints prioritize clean asynchronous code loops, semantic event delegations, and efficient browser execution architectures.
+        </p>
+      </div>
+
+      <div class="lg:col-span-5 flex justify-center lg:justify-end">
+        <div class="relative group bg-slate-900/40 p-8 rounded-3xl border border-slate-800 flex flex-col items-center justify-center w-72 h-72 shadow-2xl transition duration-300 hover:border-amber-500/30">
+          <div class="absolute inset-0 bg-gradient-to-tr from-amber-600/10 to-yellow-600/10 rounded-3xl blur-xl opacity-50"></div>
+          <div class="w-24 h-24 rounded-2xl bg-gradient-to-br from-amber-400 to-yellow-500 flex items-center justify-center text-slate-900 font-black text-4xl shadow-lg select-none group-hover:scale-105 transition-transform">
+            JS
+          </div>
+          <div class="mt-5 text-center">
+            <h4 class="text-xl font-black text-white tracking-wide">JavaScript Engine</h4>
+            <p class="text-xs text-amber-400 mt-1 font-mono tracking-widest">ECMAScript Compliant Standards</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="bg-slate-50 py-16 md:py-24 text-left font-sans border-t border-slate-200/60">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+      <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900">
+        Our JavaScript Stack Competencies
+      </h2>
+      <p class="text-slate-500 text-sm md:text-base max-w-xl mx-auto">
+        Asynchronous code pipelines, core object scopes, and browser runtime optimization standards.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      @for (stack of techStacks; track stack.title) {
+      <div class="group relative bg-white border border-slate-200/60 p-8 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+        <div class="absolute top-0 left-0 h-[4px] w-0 bg-gradient-to-r from-amber-400 via-yellow-500 to-orange-400 transition-all duration-500 ease-out group-hover:w-full"></div>
+
+        <div class="flex justify-between items-start mb-4">
+          <h3 class="text-lg font-bold text-slate-900 group-hover:text-amber-600 transition-colors">{{ stack.title }}</h3>
+          <span class="text-[10px] font-mono font-black uppercase tracking-widest px-2 py-0.5 bg-slate-100 text-slate-700 rounded">
+            {{ stack.version }}
+          </span>
+        </div>
+
+        <p class="text-slate-600 text-xs md:text-sm leading-relaxed text-justify mb-6">
+          {{ stack.description }}
+        </p>
+
+        <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-100">
+          @for (feature of stack.features; track feature) {
+          <span class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200/50 px-2.5 py-1 rounded-md">
+            ✓ {{ feature }}
+          </span>
+          }
+        </div>
+      </div>
+      }
+    </div>
+
+    <div class="mt-24">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900">
+          Why Choose Pure JavaScript Optimization?
+        </h2>
+        <div class="h-1 w-16 bg-amber-500 mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        @for (benefit of clientBenefits; track benefit.title) {
+        <div class="flex space-x-4 items-start p-2">
+          <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center font-bold text-base shadow-inner select-none">
+            {{ benefit.icon }}
+          </div>
+          <div class="space-y-1">
+            <h4 class="text-base font-bold text-slate-900">{{ benefit.title }}</h4>
+            <p class="text-slate-600 text-xs md:text-sm leading-relaxed text-justify">
+              {{ benefit.description }}
+            </p>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+
+    <div class="mt-24 bg-gradient-to-r from-slate-900 via-slate-950 to-slate-900 rounded-2xl p-8 md:p-12 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-8 relative overflow-hidden shadow-xl">
+      <div class="space-y-2 relative z-10">
+        <h4 class="text-xl md:text-2xl font-black text-white">See Our Interactive Deployments in Action</h4>
+        <p class="text-slate-400 text-xs md:text-sm max-w-2xl">
+          Explore our fully responsive core scripting assets, custom user layouts, and efficient software builds inside our portfolio workspace.
+        </p>
+      </div>
+      <div class="flex flex-wrap items-center gap-4 whitespace-nowrap relative z-10">
+        <button (click)="goToPortfolio()" class="px-5 py-3 bg-white hover:bg-slate-100 text-slate-900 font-bold text-xs rounded-lg transition duration-200 tracking-wider uppercase cursor-pointer shadow-md">
+          View Projects Portfolio &rarr;
+        </button>
+        <button (click)="goToContact()" class="px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs rounded-lg transition duration-200 tracking-wider uppercase cursor-pointer shadow-lg shadow-blue-500/20">
+          Request Technical Audit
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
