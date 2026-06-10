@@ -15,13 +15,15 @@ import { NodejsComponent } from './nodejs/nodejs';
 import { AzureComponent } from './azure/azure';
 import { AwsComponent } from './aws/aws';
 import { IosComponent } from './ios/ios';
+import { AndroidComponent } from './android/android';
+
 
 
 @Component({
   selector: 'app-root',
   imports: [AboutComponent, PortfolioComponent, ContactComponent, CustomSoftwareComponent, SaasDevelopmentComponent,
     CloudConsultingComponent, MobileArchitectureComponent, AiMlComponent, UiUxDesignComponent,
-    DotnetComponent, JavaComponent, NodejsComponent, AzureComponent, AwsComponent, IosComponent],
+    DotnetComponent, JavaComponent, NodejsComponent, AzureComponent, AwsComponent, IosComponent, AndroidComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
