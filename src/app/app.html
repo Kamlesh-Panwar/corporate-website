@@ -76,7 +76,7 @@
                 </h5>
                 <ul class="space-y-3.5 text-sm text-slate-500 font-medium">
                   <li><a (click)="navigateTo('react')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">React</a></li>
-                  <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">Angular</a></li>
+                  <li><a (click)="navigateTo('angular')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">Angular</a></li>
                   <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">Node</a></li>
                   <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">Bootstrap</a></li>
                   <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">JavaScript</a></li>
@@ -474,6 +474,10 @@
 
   @if (currentPage === 'react') {
   <app-react></app-react>
+  }
+
+  @if (currentPage === 'angular') {
+  <app-angular></app-angular>
   }
 
   <footer id="footer" class="bg-[#070c19] border-t border-slate-800/60 pt-16 pb-8 font-sans transition-all duration-300">

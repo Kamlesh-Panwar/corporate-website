@@ -18,6 +18,7 @@ import { IosComponent } from './ios/ios';
 import { AndroidComponent } from './android/android';
 import { FlutterComponent } from './flutter/flutter';
 import { ReactComponent } from './react/react';
+import { AngularComponent } from './angular/angular';
 
 
 
@@ -25,7 +26,7 @@ import { ReactComponent } from './react/react';
   selector: 'app-root',
   imports: [AboutComponent, PortfolioComponent, ContactComponent, CustomSoftwareComponent, SaasDevelopmentComponent,
     CloudConsultingComponent, MobileArchitectureComponent, AiMlComponent, UiUxDesignComponent,
-    DotnetComponent, JavaComponent, NodejsComponent, AzureComponent, AwsComponent, IosComponent, AndroidComponent, FlutterComponent, ReactComponent],
+    DotnetComponent, JavaComponent, NodejsComponent, AzureComponent, AwsComponent, IosComponent, AndroidComponent, FlutterComponent, ReactComponent, AngularComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
