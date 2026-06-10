@@ -17,6 +17,12 @@ import { AwsComponent } from './aws/aws';
 import { IosComponent } from './ios/ios';
 import { AndroidComponent } from './android/android';
 import { FlutterComponent } from './flutter/flutter';
+import { ReactComponent } from './react/react';
+import { AngularComponent } from './angular/angular';
+import { NodeComponent } from './node/node';
+import { BootstrapComponent } from './bootstrap/bootstrap';
+import { JavascriptComponent } from './javascript/javascript';
+import { JqueryComponent } from './jquery/jquery';
 
 
 
@@ -24,7 +30,8 @@ import { FlutterComponent } from './flutter/flutter';
   selector: 'app-root',
   imports: [AboutComponent, PortfolioComponent, ContactComponent, CustomSoftwareComponent, SaasDevelopmentComponent,
     CloudConsultingComponent, MobileArchitectureComponent, AiMlComponent, UiUxDesignComponent,
-    DotnetComponent, JavaComponent, NodejsComponent, AzureComponent, AwsComponent, IosComponent, AndroidComponent, FlutterComponent],
+    DotnetComponent, JavaComponent, NodejsComponent, AzureComponent, AwsComponent, IosComponent, AndroidComponent,
+    FlutterComponent, ReactComponent, AngularComponent, NodeComponent, BootstrapComponent, JavascriptComponent, JqueryComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

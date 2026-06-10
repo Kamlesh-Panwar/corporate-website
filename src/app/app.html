@@ -75,12 +75,12 @@
                   Frontend
                 </h5>
                 <ul class="space-y-3.5 text-sm text-slate-500 font-medium">
-                  <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">React</a></li>
-                  <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">Angular</a></li>
-                  <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">Node</a></li>
-                  <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">Bootstrap</a></li>
-                  <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">JavaScript</a></li>
-                  <li><a (click)="navigateTo('home', 'technologies')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">jQuery</a></li>
+                  <li><a (click)="navigateTo('react')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">React</a></li>
+                  <li><a (click)="navigateTo('angular')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">Angular</a></li>
+                  <li><a (click)="navigateTo('node')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">Node</a></li>
+                  <li><a (click)="navigateTo('bootstrap')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">Bootstrap</a></li>
+                  <li><a (click)="navigateTo('javascript')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">JavaScript</a></li>
+                  <li><a (click)="navigateTo('jquery')" class="hover:text-blue-600 transition-colors duration-150 block py-0.5 cursor-pointer">jQuery</a></li>
                 </ul>
               </div>
 
@@ -470,6 +470,30 @@
 
   @if (currentPage === 'flutter') {
   <app-flutter></app-flutter>
+  }
+
+  @if (currentPage === 'react') {
+  <app-react></app-react>
+  }
+
+  @if (currentPage === 'angular') {
+  <app-angular></app-angular>
+  }
+
+  @if (currentPage === 'node') {
+  <app-node></app-node>
+  }
+
+  @if (currentPage === 'bootstrap') {
+  <app-bootstrap></app-bootstrap>
+  }
+
+  @if (currentPage === 'javascript') {
+  <app-javascript></app-javascript>
+  }
+
+  @if (currentPage === 'jquery') {
+  <app-jquery></app-jquery>
   }
 
   <footer id="footer" class="bg-[#070c19] border-t border-slate-800/60 pt-16 pb-8 font-sans transition-all duration-300">
