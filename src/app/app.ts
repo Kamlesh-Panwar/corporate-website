@@ -38,8 +38,11 @@ import { JqueryComponent } from './jquery/jquery';
 export class App {
   title = 'corporate-website';
   currentPage: string = 'home';
+  isMobileMenuOpen: boolean = false;
+
   navigateTo(page: string, sectionId?: string) {
     this.currentPage = page;
+    this.isMobileMenuOpen = false;
     this.cdr.detectChanges();
 
     if (sectionId) {
@@ -50,6 +53,11 @@ export class App {
     } else {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+  }
+
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    this.cdr.detectChanges();
   }
 
   words: string[] = ['Design', 'Build', 'Serve'];

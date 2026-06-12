@@ -129,7 +129,74 @@
         </a>
       </nav>
 
+      <div class="flex md:hidden items-center">
+        <button (click)="toggleMobileMenu()" class="text-slate-700 hover:text-blue-600 p-2 focus:outline-none cursor-pointer">
+          @if (!isMobileMenuOpen) {
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          } @else {
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+          }
+        </button>
+      </div>
     </div>
+
+    @if (isMobileMenuOpen) {
+    <div class="md:hidden bg-white border-t border-slate-100 shadow-2xl max-h-[calc(100vh-5rem)] overflow-y-auto text-left">
+      <div class="px-6 py-4 space-y-4">
+        <a (click)="navigateTo('home')" class="block py-1 text-sm font-black text-slate-800 hover:text-blue-600 cursor-pointer">HOME</a>
+
+        <div class="border-t border-slate-100 pt-3">
+          <span class="text-[11px] font-black text-slate-400 tracking-wider block mb-2 uppercase">Company</span>
+          <div class="pl-2 space-y-2.5">
+            <a (click)="navigateTo('portfolio')" class="block text-sm font-semibold text-slate-600 hover:text-blue-600 cursor-pointer">Portfolio</a>
+            <a (click)="navigateTo('about')" class="block text-sm font-semibold text-slate-600 hover:text-blue-600 cursor-pointer">About Us</a>
+          </div>
+        </div>
+
+        <div class="border-t border-slate-100 pt-3">
+          <span class="text-[11px] font-black text-slate-400 tracking-wider block mb-2 uppercase">Services</span>
+          <div class="pl-2 grid grid-cols-1 gap-2.5">
+            <a (click)="navigateTo('custom-software')" class="text-sm font-semibold text-slate-600 hover:text-blue-600 cursor-pointer">Custom Software Engineering</a>
+            <a (click)="navigateTo('saas-development')" class="text-sm font-semibold text-slate-600 hover:text-blue-600 cursor-pointer">SaaS Product Development</a>
+            <a (click)="navigateTo('cloud-consulting')" class="text-sm font-semibold text-slate-600 hover:text-blue-600 cursor-pointer">Cloud Consulting Services</a>
+            <a (click)="navigateTo('mobile-architecture')" class="text-sm font-semibold text-slate-600 hover:text-blue-600 cursor-pointer">Mobile Application Architectures</a>
+            <a (click)="navigateTo('ai-ml')" class="text-sm font-semibold text-slate-600 hover:text-blue-600 cursor-pointer">AI / ML Engineering</a>
+            <a (click)="navigateTo('ui-ux-design')" class="text-sm font-semibold text-slate-600 hover:text-blue-600 cursor-pointer">UI/UX Creative Design</a>
+          </div>
+        </div>
+
+        <div class="border-t border-slate-100 pt-3">
+          <span class="text-[11px] font-black text-slate-400 tracking-wider block mb-2 uppercase">Technologies</span>
+          <div class="pl-2 grid grid-cols-2 gap-x-4 gap-y-2.5">
+            <a (click)="navigateTo('react')" class="text-sm font-semibold text-slate-600 hover:text-blue-600 cursor-pointer">React</a>
+            <a (click)="navigateTo('angular')" class="text-sm font-semibold text-slate-600 hover:text-blue-600 cursor-pointer">Angular</a>
+            <a (click)="navigateTo('node')" class="text-sm font-semibold text-slate-600 hover:text-blue-600 cursor-pointer">Node</a>
+            <a (click)="navigateTo('bootstrap')" class="text-sm font-semibold text-slate-600 hover:text-blue-600 cursor-pointer">Bootstrap</a>
+            <a (click)="navigateTo('javascript')" class="text-sm font-semibold text-slate-600 hover:text-blue-600 cursor-pointer">JavaScript</a>
+            <a (click)="navigateTo('jquery')" class="text-sm font-semibold text-slate-600 hover:text-blue-600 cursor-pointer">jQuery</a>
+            <a (click)="navigateTo('dotnet')" class="text-sm font-semibold text-slate-600 hover:text-blue-600 cursor-pointer">.NET</a>
+            <a (click)="navigateTo('java')" class="text-sm font-semibold text-slate-600 hover:text-blue-600 cursor-pointer">Java</a>
+            <a (click)="navigateTo('nodejs')" class="text-sm font-semibold text-slate-600 hover:text-blue-600 cursor-pointer">Node JS</a>
+            <a (click)="navigateTo('azure')" class="text-sm font-semibold text-slate-600 hover:text-blue-600 cursor-pointer">Azure</a>
+            <a (click)="navigateTo('aws')" class="text-sm font-semibold text-slate-600 hover:text-blue-600 cursor-pointer">AWS</a>
+            <a (click)="navigateTo('ios')" class="text-sm font-semibold text-slate-600 hover:text-blue-600 cursor-pointer">iOS</a>
+            <a (click)="navigateTo('android')" class="text-sm font-semibold text-slate-600 hover:text-blue-600 cursor-pointer">Android</a>
+            <a (click)="navigateTo('flutter')" class="text-sm font-semibold text-slate-600 hover:text-blue-600 cursor-pointer">Flutter</a>
+          </div>
+        </div>
+
+        <div class="border-t border-slate-100 pt-4 flex flex-col gap-3">
+          <a (click)="navigateTo('home', 'careers')" class="text-sm font-black text-slate-800 hover:text-blue-600 cursor-pointer">CAREERS</a>
+          <a (click)="navigateTo('contact')" class="block text-center py-2.5 px-4 text-xs font-bold bg-[#1a66ff] text-white rounded-lg shadow-md cursor-pointer">CONTACT</a>
+        </div>
+      </div>
+    </div>
+    }
+
   </header>
 
   @if (currentPage === 'home') {
@@ -401,100 +468,31 @@
       </div>
     </div>
   </section>
-
   }
 
-  @if (currentPage === 'about') {
-  <app-about></app-about>
-  }
-
-  @if (currentPage === 'portfolio') {
-  <app-portfolio></app-portfolio>
-  }
-
-  @if (currentPage === 'contact') {
-  <app-contact></app-contact>
-  }
-
-  @if (currentPage === 'custom-software') {
-  <app-custom-software></app-custom-software>
-  }
-
-  @if (currentPage === 'saas-development') {
-  <app-saas-development></app-saas-development>
-  }
-
-  @if (currentPage === 'cloud-consulting') {
-  <app-cloud-consulting></app-cloud-consulting>
-  }
-
-  @if (currentPage === 'mobile-architecture') {
-  <app-mobile-architecture></app-mobile-architecture>
-  }
-
-  @if (currentPage === 'ai-ml') {
-  <app-ai-ml></app-ai-ml>
-  }
-
-  @if (currentPage === 'ui-ux-design') {
-  <app-ui-ux-design></app-ui-ux-design>
-  }
-
-  @if (currentPage === 'dotnet') {
-  <app-dotnet></app-dotnet>
-  }
-
-  @if (currentPage === 'java') {
-  <app-java></app-java>
-  }
-
-  @if (currentPage === 'nodejs') {
-  <app-nodejs></app-nodejs>
-  }
-
-  @if (currentPage === 'azure') {
-  <app-azure></app-azure>
-  }
-
-  @if (currentPage === 'aws') {
-  <app-aws></app-aws>
-  }
-
-  @if (currentPage === 'ios') {
-  <app-ios></app-ios>
-  }
-
-  @if (currentPage === 'android') {
-  <app-android></app-android>
-  }
-
-  @if (currentPage === 'flutter') {
-  <app-flutter></app-flutter>
-  }
-
-  @if (currentPage === 'react') {
-  <app-react></app-react>
-  }
-
-  @if (currentPage === 'angular') {
-  <app-angular></app-angular>
-  }
-
-  @if (currentPage === 'node') {
-  <app-node></app-node>
-  }
-
-  @if (currentPage === 'bootstrap') {
-  <app-bootstrap></app-bootstrap>
-  }
-
-  @if (currentPage === 'javascript') {
-  <app-javascript></app-javascript>
-  }
-
-  @if (currentPage === 'jquery') {
-  <app-jquery></app-jquery>
-  }
+  @if (currentPage === 'about') {<app-about></app-about>}
+  @if (currentPage === 'portfolio') {<app-portfolio></app-portfolio>}
+  @if (currentPage === 'contact') {<app-contact></app-contact>}
+  @if (currentPage === 'custom-software') {<app-custom-software></app-custom-software>}
+  @if (currentPage === 'saas-development') {<app-saas-development></app-saas-development>}
+  @if (currentPage === 'cloud-consulting') {<app-cloud-consulting></app-cloud-consulting>}
+  @if (currentPage === 'mobile-architecture') {<app-mobile-architecture></app-mobile-architecture>}
+  @if (currentPage === 'ai-ml') {<app-ai-ml></app-ai-ml>}
+  @if (currentPage === 'ui-ux-design') {<app-ui-ux-design></app-ui-ux-design>}
+  @if (currentPage === 'dotnet') {<app-dotnet></app-dotnet>}
+  @if (currentPage === 'java') {<app-java></app-java>}
+  @if (currentPage === 'nodejs') {<app-nodejs></app-nodejs>}
+  @if (currentPage === 'azure') {<app-azure></app-azure>}
+  @if (currentPage === 'aws') {<app-aws></app-aws>}
+  @if (currentPage === 'ios') {<app-ios></app-ios>}
+  @if (currentPage === 'android') {<app-android></app-android>}
+  @if (currentPage === 'flutter') {<app-flutter></app-flutter>}
+  @if (currentPage === 'react') {<app-react></app-react>}
+  @if (currentPage === 'angular') {<app-angular></app-angular>}
+  @if (currentPage === 'node') {<app-node></app-node>}
+  @if (currentPage === 'bootstrap') {<app-bootstrap></app-bootstrap>}
+  @if (currentPage === 'javascript') {<app-javascript></app-javascript>}
+  @if (currentPage === 'jquery') {<app-jquery></app-jquery>}
 
   <footer id="footer" class="bg-[#070c19] border-t border-slate-800/60 pt-16 pb-8 font-sans transition-all duration-300">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 pb-12 border-b border-slate-800/40">
