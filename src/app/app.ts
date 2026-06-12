@@ -39,8 +39,17 @@ import { CareersComponent } from './careers/careers';
 export class App {
   title = 'corporate-website';
   currentPage: string = 'home';
+  isMobileMenuOpen: boolean = false;
+  isMobileCompanyOpen: boolean = false;
+  isMobileServicesOpen: boolean = false;
+  isMobileTechOpen: boolean = false;
+
   navigateTo(page: string, sectionId?: string) {
     this.currentPage = page;
+    this.isMobileMenuOpen = false;
+    this.isMobileCompanyOpen = false;
+    this.isMobileServicesOpen = false;
+    this.isMobileTechOpen = false;
     this.cdr.detectChanges();
 
     if (sectionId) {
@@ -51,6 +60,18 @@ export class App {
     } else {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+  }
+
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    this.cdr.detectChanges();
+  }
+
+  toggleMobileSubMenu(menu: string) {
+    if (menu === 'company') this.isMobileCompanyOpen = !this.isMobileCompanyOpen;
+    if (menu === 'services') this.isMobileServicesOpen = !this.isMobileServicesOpen;
+    if (menu === 'technologies') this.isMobileTechOpen = !this.isMobileTechOpen;
+    this.cdr.detectChanges();
   }
 
   words: string[] = ['Design', 'Build', 'Serve'];
