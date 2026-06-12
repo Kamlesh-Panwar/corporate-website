@@ -23,6 +23,7 @@ import { NodeComponent } from './node/node';
 import { BootstrapComponent } from './bootstrap/bootstrap';
 import { JavascriptComponent } from './javascript/javascript';
 import { JqueryComponent } from './jquery/jquery';
+import { CareersComponent } from './careers/careers';
 
 
 
@@ -31,7 +32,7 @@ import { JqueryComponent } from './jquery/jquery';
   imports: [AboutComponent, PortfolioComponent, ContactComponent, CustomSoftwareComponent, SaasDevelopmentComponent,
     CloudConsultingComponent, MobileArchitectureComponent, AiMlComponent, UiUxDesignComponent,
     DotnetComponent, JavaComponent, NodejsComponent, AzureComponent, AwsComponent, IosComponent, AndroidComponent,
-    FlutterComponent, ReactComponent, AngularComponent, NodeComponent, BootstrapComponent, JavascriptComponent, JqueryComponent],
+    FlutterComponent, ReactComponent, AngularComponent, NodeComponent, BootstrapComponent, JavascriptComponent, JqueryComponent, CareersComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

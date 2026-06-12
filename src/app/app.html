@@ -122,8 +122,10 @@
             </div>
           </div>
         </div>
-
-        <a (click)="navigateTo('home', 'careers')" class="text-[13px] font-bold tracking-widest text-slate-800 hover:text-blue-600 transition duration-200 cursor-pointer">CAREERS</a>
+               
+        <a (click)="navigateTo('careers')" [class.text-blue-600]="currentPage === 'careers'" class="text-[13px] font-bold tracking-widest text-slate-800 hover:text-blue-600 transition duration-200 cursor-pointer uppercase">
+          CAREERS
+        </a>
         <a (click)="navigateTo('contact')" class="text-[13px] font-bold tracking-widest text-slate-800 hover:text-blue-600 transition duration-200 cursor-pointer uppercase select-none">
           CONTACT
         </a>
@@ -493,6 +495,7 @@
   @if (currentPage === 'bootstrap') {<app-bootstrap></app-bootstrap>}
   @if (currentPage === 'javascript') {<app-javascript></app-javascript>}
   @if (currentPage === 'jquery') {<app-jquery></app-jquery>}
+  @if (currentPage === 'careers') {<app-careers></app-careers>}
 
   <footer id="footer" class="bg-[#070c19] border-t border-slate-800/60 pt-16 pb-8 font-sans transition-all duration-300">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 pb-12 border-b border-slate-800/40">
