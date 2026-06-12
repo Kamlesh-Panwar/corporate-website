@@ -1,0 +1,116 @@
+<!-- Careers Page -->
+<section class="relative w-full min-h-[420px] bg-[#060b18] text-white py-20 flex items-center overflow-hidden font-sans text-left animate-fade-in">
+  <div class="absolute inset-0 z-0 opacity-10 pointer-events-none select-none bg-[radial-gradient(#1a66ff_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+      <div class="lg:col-span-7 space-y-5">
+        <div class="inline-flex items-center space-x-3 bg-blue-500/10 border border-blue-500/20 px-4 py-1.5 rounded-full">
+          <span class="flex h-2 w-2 rounded-full bg-blue-400 animate-pulse"></span>
+          <span class="text-xs font-bold text-blue-400 tracking-wider uppercase">Join Our Elite Engineering Workspace</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white leading-tight">
+          Build the Future of<br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-600 to-cyan-400">Enterprise Software Technology</span>
+        </h1>
+        <p class="text-slate-300 text-xs sm:text-sm md:text-base leading-relaxed text-justify font-normal max-w-xl">
+          We are seeking dedicated system thinkers, clean-code developers, and passionate innovators. Explore open engineering pathways designed to empower your professional development boundaries.
+        </p>
+      </div>
+
+      <div class="lg:col-span-5 flex justify-center lg:justify-end">
+        <div class="relative group bg-slate-900/40 p-8 rounded-3xl border border-slate-800 flex flex-col items-center justify-center w-72 h-72 shadow-2xl transition duration-300 hover:border-blue-500/30">
+          <div class="absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-cyan-600/10 rounded-3xl blur-xl opacity-50"></div>
+          <div class="w-24 h-24 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center text-white font-black text-4xl shadow-lg select-none transform group-hover:scale-105 transition-transform">
+            💼
+          </div>
+          <div class="mt-5 text-center">
+            <h4 class="text-xl font-black text-white tracking-wide">Join Our Team</h4>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="bg-white py-16 md:py-24 text-left font-sans border-t border-slate-100">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+      <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900">Our Structured Evaluation Path</h2>
+      <div class="h-1 w-14 bg-blue-600 mx-auto rounded-full"></div>
+      <p class="text-slate-500 text-xs sm:text-sm max-w-md mx-auto leading-relaxed">
+        A rigorous, transparent four-stage pipeline structured to match talent with complex production goals.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      @for (round of interviewRounds; track round.step) {
+      <div class="group relative bg-slate-50 border border-slate-200/50 p-6 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-xl hover:bg-white hover:-translate-y-1 overflow-hidden">
+        <div class="absolute top-0 left-0 h-[4px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"></div>
+
+        <div class="flex justify-between items-center mb-5">
+          <span class="text-xs font-mono font-black tracking-widest text-blue-600 bg-blue-50 border border-blue-100 px-2.5 py-1 rounded-md">
+            STAGE {{ round.step }}
+          </span>
+        </div>
+
+        <h3 class="text-base font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+          {{ round.title }}
+        </h3>
+
+        <p class="text-slate-600 text-xs md:text-sm leading-relaxed text-justify">
+          {{ round.description }}
+        </p>
+      </div>
+      }
+    </div>
+
+  </div>
+</section>
+
+<section class="bg-slate-50 py-16 md:py-24 text-left font-sans border-t border-slate-200/60">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+      <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900">What We Offer</h2>
+      <div class="h-1 w-12 bg-blue-600 mx-auto rounded-full"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      @for (benefit of employeeBenefits; track benefit.title) {
+      <div class="flex space-x-4 items-start bg-white p-6 rounded-2xl border border-slate-200/40 shadow-sm hover:shadow-md transition duration-200">
+        <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-lg select-none shadow-inner">
+          {{ benefit.icon }}
+        </div>
+        <div class="space-y-1">
+          <h4 class="text-base font-bold text-slate-900 tracking-tight">{{ benefit.title }}</h4>
+          <p class="text-slate-600 text-xs md:text-sm leading-relaxed text-justify">
+            {{ benefit.description }}
+          </p>
+        </div>
+      </div>
+      }
+    </div>
+
+    <div class="mt-20 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 rounded-2xl p-8 md:p-12 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-6 relative overflow-hidden shadow-xl">
+      <div class="space-y-2 relative z-10">
+        <h4 class="text-lg md:text-2xl font-black text-white">Ready to take your next career step?</h4>
+        <p class="text-indigo-200 text-xs md:text-sm max-w-xl">
+          Submit your latest structural cv profile and technical track resume layout straight to our recruitment department mailbox.
+        </p>
+      </div>
+      <div class="flex flex-col sm:flex-row items-center gap-4 whitespace-nowrap relative z-10 w-full md:w-auto">
+        <a href="mailto:business@nimbad.com" class="w-full sm:w-auto px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs rounded-lg transition duration-200 tracking-wider uppercase cursor-pointer shadow-lg shadow-blue-500/20">
+          Apply Now
+        </a>
+        <button (click)="goToContact()" class="w-full sm:w-auto px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs rounded-lg transition duration-200 tracking-wider uppercase cursor-pointer shadow-lg shadow-blue-500/20">
+          Connect With HR &rarr;
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
