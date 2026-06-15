@@ -70,6 +70,12 @@ export class CareersComponent {
   ];
 
   goToContact() {
-    this.app.navigateTo('contact');
+    this.app.navigateTo('contact', 'contact-form');
+  }
+
+  applyViaWhatsApp() {
+    const phoneNumber = '918982373618'; // format: country code + number
+    const message = encodeURIComponent('Hello Nimbad Infotech, I am interested in applying for a position and would like to share my CV.');
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   }
 }
