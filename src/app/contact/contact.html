@@ -112,57 +112,7 @@
 
       <div class="lg:col-span-8 bg-white border border-slate-200/60 rounded-2xl p-6 sm:p-10 shadow-sm relative overflow-hidden">
         <div class="absolute top-0 left-0 h-[4px] w-full bg-gradient-to-r from-blue-600 via-cyan-400 to-indigo-500"></div>
-
-        <!--<form class="space-y-6">-->
-        <!-- Row 1: Name & Email ID -->
-        <!--<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-    <div class="space-y-2">
-      <label class="text-xs font-bold uppercase tracking-wider text-slate-700">Name</label>
-      <input type="text" placeholder="Name" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-600 focus:bg-white transition" required />
-    </div>
-    <div class="space-y-2">
-      <label class="text-xs font-bold uppercase tracking-wider text-slate-700">Email ID</label>
-      <input type="email" placeholder="Email ID" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-600 focus:bg-white transition" required />
-    </div>
-  </div>-->
-        <!-- Row 2: Mobile Number & Subject -->
-        <!--<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-    <div class="space-y-2">
-      <label class="text-xs font-bold uppercase tracking-wider text-slate-700">Mobile Number</label>
-      <input type="tel" placeholder="Mobile Number" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-600 focus:bg-white transition" required />
-    </div>
-    <div class="space-y-2">
-      <label class="text-xs font-bold uppercase tracking-wider text-slate-700">Subject</label>
-      <input type="text" placeholder="Subject" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-600 focus:bg-white transition" required />
-    </div>
-  </div>-->
-        <!-- Row 3: Message Textarea -->
-        <!--<div class="space-y-2">
-      <label class="text-xs font-bold uppercase tracking-wider text-slate-700">Message</label>
-      <textarea rows="4" placeholder="Message" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-600 focus:bg-white transition resize-none" required></textarea>
-    </div>
-
-    <div class="pt-4 flex flex-col items-center justify-center space-y-4 w-full">
-      <button type="submit" class="w-full sm:w-64 px-8 py-3.5 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-indigo-600 text-white font-bold text-sm rounded-lg shadow-md transition duration-200 tracking-wide uppercase cursor-pointer text-center">
-        Send Message &rarr;
-      </button>
-
-      <div class="flex items-center justify-center space-x-3 w-full max-w-xs py-1 select-none">
-        <div class="h-[1px] bg-slate-200 flex-grow"></div>
-        <span class="text-[11px] font-bold text-slate-400 tracking-widest uppercase">OR</span>
-        <div class="h-[1px] bg-slate-200 flex-grow"></div>
-      </div>
-
-      <a href="https://wa.me/918982373618"
-         target="_blank"
-         class="w-full sm:w-auto inline-flex items-center justify-center space-x-3 px-6 py-3.5 bg-transparent border-2 border-[#25d366] text-[#25d366] hover:bg-[#25d366]/10 font-black text-xs sm:text-sm rounded-xl tracking-widest uppercase transition duration-200 whitespace-nowrap cursor-pointer no-underline">
-        <svg class="w-5 h-5 fill-current flex-shrink-0" viewBox="0 0 24 24">
-          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.66.986 3.296 1.489 4.93 1.49 5.361 0 9.74-4.381 9.743-9.742.001-2.596-1.01-5.038-2.846-6.874-1.837-1.836-4.271-2.846-6.869-2.847-5.362 0-9.74 4.381-9.743 9.744a9.699 9.699 0 001.497 4.945l-.982 3.585 3.674-.963zm13.14-5.463c-.303-.152-1.797-.887-2.051-.98-.254-.093-.44-.139-.626.139-.186.279-.718.887-.88 1.072-.163.186-.325.209-.628.057-.303-.151-1.278-.47-2.435-1.502-.9-.803-1.507-1.795-1.684-2.1-.177-.302-.019-.465.132-.615.136-.135.303-.354.455-.531.152-.177.203-.295.304-.49.102-.197.051-.369-.025-.519-.076-.152-.626-1.507-.857-2.064-.226-.543-.454-.47-.627-.478-.163-.008-.35-.01-.537-.01-.186 0-.489.07-.745.346-.256.279-.978.956-.978 2.331 0 1.375 1.002 2.702 1.142 2.888.14.186 1.972 3.01 4.777 4.219.667.288 1.188.46 1.594.589.67.213 1.28.183 1.762.11.537-.081 1.797-.734 2.051-1.442.254-.707.254-1.314.178-1.442-.076-.128-.262-.204-.565-.355z" />
-        </svg>
-        <span>Connect via Whatsapp</span>
-      </a>
-    </div>
-  </form>-->
+                
         <form class="space-y-6" (submit)="$event.preventDefault()">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div class="space-y-2">
