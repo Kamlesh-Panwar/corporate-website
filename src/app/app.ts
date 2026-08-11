@@ -24,6 +24,7 @@ import { BootstrapComponent } from './bootstrap/bootstrap';
 import { JavascriptComponent } from './javascript/javascript';
 import { JqueryComponent } from './jquery/jquery';
 import { CareersComponent } from './careers/careers';
+import { TrainingComponent } from './training/training';
 
 
 
@@ -32,12 +33,13 @@ import { CareersComponent } from './careers/careers';
   imports: [AboutComponent, PortfolioComponent, ContactComponent, CustomSoftwareComponent, SaasDevelopmentComponent,
     CloudConsultingComponent, MobileArchitectureComponent, AiMlComponent, UiUxDesignComponent,
     DotnetComponent, JavaComponent, NodejsComponent, AzureComponent, AwsComponent, IosComponent, AndroidComponent,
-    FlutterComponent, ReactComponent, AngularComponent, NodeComponent, BootstrapComponent, JavascriptComponent, JqueryComponent, CareersComponent],
+    FlutterComponent, ReactComponent, AngularComponent, NodeComponent, BootstrapComponent, JavascriptComponent, JqueryComponent, CareersComponent,
+    TrainingComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  title = 'corporate-website';
+  title = 'Nimbad Infotech Pvt. Ltd.';
   currentPage: string = 'home';
   isMobileMenuOpen: boolean = false;
   isMobileCompanyOpen: boolean = false;
